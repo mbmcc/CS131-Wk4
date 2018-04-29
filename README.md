@@ -10,6 +10,7 @@ A place for me to manage my c++ homework while learning git / github and while s
 
 _____
 Tools:
-+ Termux on phone / tablet with clang, vim, git 
++ Linux Debian - git, clang6 and gcc++ 7
++ Termux on phone / tablet with clang, vim, git
 + Online IDE compiler debugger https://www.onlinegdb.com/
 + Online IDE codenvy.io Ubuntu 16.04 instance with gcc and gdb using elipse editor
