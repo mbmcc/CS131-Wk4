@@ -31,8 +31,8 @@ using namespace std;
 // END OF HEAD
 
 // GLOBALS
-  double totalHours = 0;
-  double totalCharged = 0;
+  double totalHours = 0.0;
+  double totalCharged = 0.0;
   int carNumber = 0;
 //      Can I set a cars object that has the properties of Car Number, Hours and Charge
 //      and the call each unique item in the result?
@@ -62,13 +62,13 @@ double calculateCharges(int hours) {
 */
   // Prints the charges per car
 void printHeader(){
-     std::cout << setw(2) << "Car" << setw(10) << "Hours" << setw(10) << "Charge" << endl;
+     std::cout << setw(2) << "Car" << setw(10) << "Hours" << setw(10) << "Charge" << std::fixed << std::showpoint << std::setprecision(2) << endl;
 }
 void printCharges() {
-      std::cout << setw(2) << carNumber << setw(11) << hours << setw(5) << "$" << std::fixed << std::showpoint << std::setprecision(2) << charges << endl;
+      std::cout << setw(2) << carNumber << setw(11) << hours << setw(5) << "$" << charges << endl;
 }
 void printTotal(){
-      std::cout << "Totals" << setw(7) << totalHours << setw(9) << totalCharged << endl;
+      std::cout << "Totals" << setw(7) << totalHours << setw(5) << "$" << totalCharged << endl;
 }
 
 double calculateCharges(double hours) {
@@ -92,26 +92,26 @@ int main() {
     totalCars +=1;
     hours = 1.5;
     calculateCharges(hours);
-    charges += totalCharged;
-    hours += totalHours;
+    totalCharged += charges;
+    totalHours += hours;;
     printCharges();
 
     //carTwo 4 hours
     carNumber = 2;
     totalCars +=1;
-    hours = 4;
+    hours = 4.0;
     calculateCharges(hours);
-    charges += totalCharged;
-    hours += totalHours;
+    totalCharged += charges;
+    totalHours += hours;;
     printCharges();
 
     //carThree 24 hours    
     carNumber = 3;
     totalCars += 1;
-    hours = 24;
+    hours = 24.0;
     calculateCharges(hours);
-    charges += totalCharged;
-    hours += totalHours;
+    totalCharged += charges;
+    totalHours += hours;;
     printCharges();
     
     //Total
