@@ -18,7 +18,6 @@ public:
   void setCarNumber(int); // sets the car / customer Number
   void setHours(double); // set the hours parked
 
-
 private:
 
 
